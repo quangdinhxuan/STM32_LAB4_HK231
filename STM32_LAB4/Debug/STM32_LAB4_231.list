@@ -1492,7 +1492,7 @@ int check_RST(char str[]){
 	int flag = 0;
  8000854:	2300      	movs	r3, #0
  8000856:	60fb      	str	r3, [r7, #12]
-	if (str[0] == 'R' && str[1] == 'S' && str[2] == 'T')
+	if (str[0] == 'R' && str[1] == 'S' && str[2] == 'T'){
  8000858:	687b      	ldr	r3, [r7, #4]
  800085a:	781b      	ldrb	r3, [r3, #0]
  800085c:	2b52      	cmp	r3, #82	; 0x52
@@ -1511,10 +1511,12 @@ int check_RST(char str[]){
  8000874:	2301      	movs	r3, #1
  8000876:	60fb      	str	r3, [r7, #12]
  8000878:	e001      	b.n	800087e <check_RST+0x32>
-	else
+	}
+	else{
 		flag = 0;
  800087a:	2300      	movs	r3, #0
  800087c:	60fb      	str	r3, [r7, #12]
+	}
 	return flag;
  800087e:	68fb      	ldr	r3, [r7, #12]
 }
@@ -1534,7 +1536,7 @@ int check_OK(char str[]){
 	int flag = 0;
  8000892:	2300      	movs	r3, #0
  8000894:	60fb      	str	r3, [r7, #12]
-	if (str[0] == 'O' && str[1] == 'K')
+	if (str[0] == 'O' && str[1] == 'K'){
  8000896:	687b      	ldr	r3, [r7, #4]
  8000898:	781b      	ldrb	r3, [r3, #0]
  800089a:	2b4f      	cmp	r3, #79	; 0x4f
@@ -1548,10 +1550,12 @@ int check_OK(char str[]){
  80008a8:	2301      	movs	r3, #1
  80008aa:	60fb      	str	r3, [r7, #12]
  80008ac:	e001      	b.n	80008b2 <check_OK+0x28>
-	else
+	}
+	else{
 		flag = 0;
  80008ae:	2300      	movs	r3, #0
  80008b0:	60fb      	str	r3, [r7, #12]
+	}
 	return flag;
  80008b2:	68fb      	ldr	r3, [r7, #12]
 }
@@ -1563,8 +1567,6 @@ int check_OK(char str[]){
 	...
 
 080008c0 <command_parser_fsm>:
-
-
 void  command_parser_fsm(){
  80008c0:	b580      	push	{r7, lr}
  80008c2:	af00      	add	r7, sp, #0
@@ -1607,7 +1609,7 @@ void  command_parser_fsm(){
  80008f6:	701a      	strb	r2, [r3, #0]
 		break;
  80008f8:	e057      	b.n	80009aa <command_parser_fsm+0xea>
-		if (buffer[idx_buffer] != '!' && buffer[idx_buffer] != '#'){
+		if (buffer[idx_buffer] != '!' && buffer[idx_buffer] != '#'){//read RST/OK
  80008fa:	4b2f      	ldr	r3, [pc, #188]	; (80009b8 <command_parser_fsm+0xf8>)
  80008fc:	781b      	ldrb	r3, [r3, #0]
  80008fe:	461a      	mov	r2, r3

@@ -1,4 +1,4 @@
 ../Core/Src/uart_fsm.c:29:5:check_RST	24	static
-../Core/Src/uart_fsm.c:38:5:check_OK	24	static
-../Core/Src/uart_fsm.c:48:7:command_parser_fsm	8	static
-../Core/Src/uart_fsm.c:85:6:uart_communiation_fsm	8	static
+../Core/Src/uart_fsm.c:40:5:check_OK	24	static
+../Core/Src/uart_fsm.c:50:7:command_parser_fsm	8	static
+../Core/Src/uart_fsm.c:86:6:uart_communiation_fsm	8	static

@@ -54,7 +54,6 @@ void  command_parser_fsm(){
 			cmd_status=READ;
 			idx_buffer++;
 			cmd_flag = 0;
-
 		}
 		break;
 	case READ:

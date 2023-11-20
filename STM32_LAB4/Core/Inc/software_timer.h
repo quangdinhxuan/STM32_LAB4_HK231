@@ -11,7 +11,7 @@
 
 #include"global.h"
 
-extern int timer_flag[3];
+extern int timer_flag[2];
 void setTimer(int count,int duration);
 void timerRun(int count);
 #endif /* INC_SOFTWARE_TIMER_H_ */
